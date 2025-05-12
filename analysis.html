@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Depositional Trend Analysis</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
@@ -15,7 +15,7 @@
       --blue: #81B29A;
       --yellow: #F2CC8F;
     }
-    * { box-sizing: border-box; margin:0; padding:0; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: 'Roboto', sans-serif;
       background-color: var(--bg-color);
@@ -27,13 +27,18 @@
       text-align: center;
       padding: 0.75rem;
     }
-    nav a, footer a { color: var(--text-color); text-decoration: none; font-weight:500; }
+    nav a, footer a {
+      color: var(--text-color);
+      text-decoration: none;
+      font-weight: 500;
+    }
     header {
       background-color: var(--primary-color);
       text-align: center;
       padding: 2.5rem 1rem;
     }
     header h1 { margin-bottom: 0.5rem; }
+    header p { margin-top: 0.5rem; }
     main {
       max-width: 700px;
       margin: 2rem auto;
@@ -44,41 +49,88 @@
       border-left: 5px solid var(--green);
       border-radius: 0.5rem;
       padding: 1.5rem;
+      margin-bottom: 1.5rem;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
-    h2 { margin-bottom: 1rem; }
+    h2 {
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
     .button {
       display: inline-block;
       margin-top: 1rem;
       padding: 0.5rem 1rem;
-      background: var(--secondary-color);
+      background-color: var(--secondary-color);
       color: var(--text-color);
       border-radius: 0.5rem;
       text-decoration: none;
       font-weight: 500;
     }
-    img { max-width: 100%; border-radius: 0.25rem; margin-top: 1rem; }
+    img {
+      max-width: 100%;
+      border-radius: 0.25rem;
+      margin-top: 1rem;
+    }
   </style>
 </head>
 <body>
   <nav>
     <a class="button" href="index.html#projects">← Back to Experience</a>
   </nav>
+
   <header>
     <h1>Depositional Trend Analysis</h1>
     <p>Geophysical Data Science Coursework</p>
   </header>
+
   <main>
+    <!-- Project Summary -->
     <section>
-      <h2>Overview</h2>
-      <p>During my Geophysical Data Science course, I analyzed multi-decade model outputs of NOₓ and NHₓ deposition. I performed exploratory data analysis, statistical extraction, and adapted existing Python code to generate publication-quality figures.</p>
-      <img src="analysis_chart.png" alt="Simulated NOₓ/NHₓ Deposition Trends"/>
-      <p>This time-series plot illustrates changes in deposition over time, highlighting spike and dip events that I then investigated further.</p>
-      <a class="button" href="index.html#projects">← Back to Experience</a>
+      <h2>Project Summary</h2>
+      <p><strong>Assessment_2_finalProof (Score: 76 / 95)</strong></p>
+      <p>
+        I processed multi-decade NOₓ/NHₓ deposition model outputs, conducted exploratory data analysis,
+        and adapted existing Python scripts to craft publication-quality figures.
+      </p>
     </section>
+
+    <!-- Key Figure -->
+    <section>
+      <h2>Key Figure</h2>
+      <img src="globallyAveragedanomaly.png" alt="Monthly temperature anomalies at three sites"/>
+      <p>
+        This anomaly plot shows balanced long-term variations across Yakushima Island, Fiordland National Park,
+        and Taynish National Nature Reserve, with notable seasonal and extreme outliers that I investigated further.
+      </p>
+    </section>
+
+    <!-- Null-Value Distribution -->
+    <section>
+      <h2>Null-Value Distribution</h2>
+      <img src="numberOfNullsMap.png" alt="Map showing count of missing values per grid cell"/>
+      <p>
+        I mapped the count of missing data across all model grid cells to identify regions where data cleaning
+        was most critical. Areas with higher null counts guided my gap-filling strategy.
+      </p>
+    </section>
+
+    <!-- Global Warming Pattern -->
+    <section>
+      <h2>Global Warming Pattern</h2>
+      <img src="global_mean_anomaly.png" alt="Latitude-weighted global mean temperature anomaly over time"/>
+      <p>
+        This latitude-weighted time series highlights a clear upward trend in global temperature anomalies
+        from 1960 to 2020, underscoring the acceleration of warming—especially at high latitudes.
+      </p>
+    </section>
+
+    <!-- Back Button -->
+    <a class="button" href="index.html#projects">← Back to Experience</a>
   </main>
+
   <footer>
     <p>&copy; 2025 Vadim Laime</p>
   </footer>
 </body>
 </html>
+
