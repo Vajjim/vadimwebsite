@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vadim Laime - BSc Ecological and Environmental Sciences</title>
+  <title>Vadim Laime - BSc Ecological and Environmental Sciences with Management</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -13,12 +13,19 @@
       --text-color: #2C3E3F;  
       --accent-green: #3A8B7D; 
       --accent-blue: #3D7BBD; 
-      --accent-earth: #C57D45; 
+      --accent-earth: #C57D45;
+      --pattern-lines: repeating-linear-gradient(
+        45deg,
+        var(--accent-green),
+        var(--accent-green) 2px,
+        transparent 2px,
+        transparent 8px
+      );
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: 'Roboto', sans-serif;
-      background-color: var(--bg-color);
+      background-color: var(--pattern-lines), var( --accent-earth);
       color: var(--text-color);
       line-height: 1.6;
     }
