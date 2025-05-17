@@ -89,38 +89,49 @@
       <h2>Project Summary</h2>
       <p><strong>Assessment_2_finalProof (Score: 76 / 95)</strong></p>
       <p>
-        I processed multi-decade NOₓ/NHₓ deposition model outputs, conducted exploratory data analysis,
-        and adapted existing Python scripts to craft publication-quality figures.
+        Coursework in Geophysical Data Science: 
+        I downloaded and processed a HadCRUT data set and produced visualisations to find evidence for climate change and extreme events. 
+        I also used the data to compare the abnormal temperature conditions of similar environments worldwide.
       </p>
     </section>
 
-    <!-- Key Figure -->
+    <!-- Key Figure 1: Global Mean Temperature -->
     <section>
-      <h2>Key Figure</h2>
+      <h2>Key Figure 1: Global Mean Temperature</h2>
       <img src="globallyAveragedanomaly.png" alt="Monthly temperature anomalies at three sites"/>
       <p>
-        This anomaly plot shows balanced long-term variations across Yakushima Island, Fiordland National Park,
-        and Taynish National Nature Reserve, with notable seasonal and extreme outliers that I investigated further.
+        This graph shows the global mean surface air temperature in Kelvin (K) from 1860 to 2020,
+        with fluctuations ranging from -1.0 to +1.0 K and an increase, especially visible from 1980 onwards.
+
+        Good aspects: The graph is clear and easy to read, and the data trends are visually distinguishable.
+        Bad aspects: The axes lack a reference point (e.g., pre-industrial baseline), and a trend line.
+
       </p>
     </section>
 
-    <!-- Null-Value Distribution -->
+    <!-- Key Fig 2: Null Value Distribution  -->
     <section>
-      <h2>Null-Value Distribution</h2>
+      <h2>Key Fig 2: Null Value Distribution</h2>
       <img src="numberOfNullsMap.png" alt="Map showing count of missing values per grid cell"/>
       <p>
-        I mapped the count of missing data across all model grid cells to identify regions where data cleaning
-        was most critical. Areas with higher null counts guided my gap-filling strategy.
+        This graph displays missing data (null values) for the first month across different latitudes and longitudes, with the number of nulls represented on a colour scale.
+
+        Good aspects: The use of a spatial (latitude-longitude) plot effectively visualises geographic patterns in data gaps, and the colour scale helps distinguish regions with higher missing values.
+        Bad aspects: The title ("Missing values for first month") is vague, it doesn't specify the dataset or time. The colour scale's numeric labels (e.g., "175") are unclear without units or context, and the axis labels could be more prominent for readability.
+
       </p>
     </section>
 
-    <!-- Global Warming Pattern -->
+    <!-- Key Fig 3: Global Warming Pattern  -->
     <section>
-      <h2>Global Warming Pattern</h2>
+      <h2>Key Fig 3: Global Warming Pattern</h2>
       <img src="global_mean_anomaly.png" alt="Latitude-weighted global mean temperature anomaly over time"/>
       <p>
-        This latitude-weighted time series highlights a clear upward trend in global temperature anomalies
-        from 1960 to 2020, underscoring the acceleration of warming—especially at high latitudes.
+        This graph compares seasonal (winter DJF and summer JJA) and overall global warming patterns, showing temperature changes (°C) with a clear upward trend from 1960 to 2020.
+
+        Good aspects: The graph clearly shows seasonal and long-term temperature changes with a simple color scale (red for warming, blue for cooling). The side-by-side panels make it easy to compare winter and summer trends
+        Bad aspects: The y-axis has a typo ("-0.0" instead of "0.0"), and the title is too vague, it should include the time period (1960–2020). 
+
       </p>
     </section>
 
