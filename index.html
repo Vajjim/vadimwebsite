@@ -3,152 +3,177 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vadim Laime - BSc Ecological and Environmental Sciences with Management</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <title>Vadim Laime</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary-color: #2A7F62;  
-      --secondary-color: #1A5F7F; 
-      --bg-color: #F8F9FA; 
-      --text-color: #2C3E3F;  
-      --accent-green: #3A8B7D; 
-      --accent-blue: #3D7BBD; 
-      --accent-earth: #C57D45;
-      --pattern-lines: repeating-linear-gradient(
-        45deg,
-        var(--accent-green),
-        var(--accent-green) 2px,
-        transparent 2px,
-        transparent 8px
-      );
+      --bg: #ffffff;
+      --text: #1a1a1a;
+      --muted: #666;
+      --accent: #3A8B7D;
+      --card: #f5f5f5;
     }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      font-family: 'Roboto', sans-serif;
-      background-color: var(--pattern-lines), var( --secondary-color);
-      color: var(--text-color);
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
       line-height: 1.6;
     }
     nav {
-      background-color: var(--blue);
       position: sticky;
       top: 0;
-      z-index: 10;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      background: #fff;
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      display: flex;
+      justify-content: space-between;
+      z-index: 100;
     }
-    nav::after { content: ''; display: block; height: 0; background-color: var(--yellow); transition: height 0.3s; }
-    nav.scrolled::after { height: 12px; }
-    nav ul { display: flex; justify-content: center; list-style: none; padding: 0.75rem; }
-    nav ul li { margin: 0 1rem; }
-    nav a { color: var(--text-color); font-weight: 500; text-decoration: none; transition: opacity 0.2s; }
-    nav a:hover { opacity: 0.7; }
-    header {
-      background-color: var(--primary-color);
-      text-align: center;
-      padding: 3rem 1.5rem;
-    }
-    header h1 { font-size: 2.5rem; margin-bottom: 0.25rem; }
-    header h2 { font-size: 1.25rem; margin-bottom: 0.75rem; }
-    header p { margin-bottom: 1rem; }
-    header .button {
-      background-color: var(--secondary-color);
-      padding: 0.75rem 1.25rem;
-      border-radius: 0.5rem;
-      color: var(--text-color);
+    nav a {
+      color: var(--text);
       text-decoration: none;
+      margin-left: 1.5rem;
       font-weight: 500;
     }
-     main {max-width: 900px; margin: 0 auto; padding: 2rem;}
-    section { background-color: var(--pattern-lines), var(--accent-earth); border-left: 5px solid transparent; border-radius: 0.5rem; padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
-    .section-about { border-color: var(--green); }
-    .section-experience { border-color: var(--blue); }
-    .section-contact { border-color: var(--yellow); }
-    section h2 { margin-bottom: 0.75rem; font-size: 1.5rem; }
-    .experience-grid { display: flex; flex-direction: column; gap: 2rem;}
-    .experience-card {background-color: #f9f9f9;padding: 1.5rem;border-radius: 10px;box-shadow: 0 2px 8px rgba(0,0,0,0.1);}
-    .experience-card h3 {margin-top: 0;}
-    .button {display: inline-block; margin-top: 1rem; padding: 0.75rem 1.5rem; background-color: #0077cc; color: #fff; text-decoration: none; border-radius: 5px; font-weight: bold; transition: background-color 0.3s ease;}
-    .button:hover,
-    .button:focus {background-color: #005fa3;}
-    footer { text-align: center; font-size: 0.85rem; color: #718096; margin: 2rem 0; }
-    footer .icons a { margin: 0 0.5rem; display: inline-block; }
-    footer .icons img { width: 24px; height: 24px; }
+    header {
+      text-align: center;
+      padding: 5rem 2rem 2rem;
+      background: linear-gradient(to right, #E0F4EC, #F9FAFB);
+    }
+    header h1 { font-size: 2.75rem; }
+    header h2 { color: var(--muted); margin-top: 0.5rem; font-weight: 400; }
+
+    .hero {
+      width: 100%;
+      height: 60vh;
+      background: url('your-photo.jpg') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    main { padding: 3rem 2rem; max-width: 1000px; margin: 0 auto; }
+    section { margin-bottom: 3rem; }
+    section h2 { font-size: 2rem; margin-bottom: 1rem; }
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .photo-grid img {
+      width: 100%;
+      height: auto;
+      border-radius: 16px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+    }
+    .card {
+      background-color: var(--card);
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+    }
+    footer {
+      text-align: center;
+      color: var(--muted);
+      padding: 2rem;
+      font-size: 0.875rem;
+    }
+    .project-link {
+      display: inline-block;
+      margin-top: 1rem;
+      background-color: var(--accent);
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      text-decoration: none;
+    }
   </style>
 </head>
 <body>
-  <nav id="navbar">
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#experience">Experience</a></li>
-    </ul>
+  <nav>
+    <div><strong>Vadim Laime</strong></div>
+    <div>
+      <a href="#about">About</a>
+      <a href="#triathlon">Triathlon</a>
+      <a href="#cooking">Cooking</a>
+      <a href="#hobbies">Other Hobbies</a>
+      <a href="#projects">Projects</a>
+    </div>
   </nav>
- <header id="home">
-  <h1>Vadim Laime</h1>
-  <h2>BSc Ecological and Environmental Sciences with Management</h2>
-  <p>Environmental Science | Ecology | Data Analysis</p>
-  
-   
-   <p>
-    <a href="linkedin.com/in/vadim-laime" class="button" target="_blank" rel="noopener noreferrer">
-      LinkedIn Profile
-    
-    
-    
-    
-    
-    </a><br>
 
-     <a href="mailto:vadim.laime@me.com" class="button">Email Me</a>
+  <header>
+    <h1>Vadim Laime</h1>
+    <h2>BSc Ecological and Environmental Sciences with Management</h2>
+  </header>
 
-     <a href="tel:+447356229567" class="button">Call UK: +44 7356 229567</a>
+  <div class="hero">
+    Discover. Explore. Connect.
+  </div>
 
-     <a href="tel:+32498532226" class="button">Call BE: +32 498 53 22 26</a>
-  </p>
-</header>
-    <section id="about" class="section-about">
+  <main>
+    <section id="about" class="card">
       <h2>About Me</h2>
-        <h3>Academic & Ecological Focus</h3>
-      <p>Currently pursuing a BSc in Ecological and Environmental Science with Management at the University of Edinburgh. I’m particularly interested in biodiversity, conservation, and sustainable resource use. My coursework covers environmental impact assessment, biological processes, soil, water and atmospheric processes, risk management, and conservation strategies, alongside an emphasis on business and management aspects such as finance, stakeholder engagement, strategic planning, and decision-making.</p>
-
-        <h3>Passions & Interests</h3>
-      <p>Outside of academics, I’m passionate about exploring cultural diversity through food. I hold a PADI diving certification and love exploring marine ecosystems just as much as terrestrial ones. I also love endurance running, having completed a marathon and two ultramarathons.
-          In my downtime, you’ll often find me following Formula One, playing football or ultimate frisbee, or in the kitchen discovering new recipes. I speak French and English fluently, and I’m conversational in Spanish.</p>
-
-        <h3>Triathlon</h3> 
-      <p>As vice-captain of the University of Edinburgh’s triathlon performance team, I lead training sessions and support the squad. Competing at the university level in triathlon is more than sport to me: it’s about community, growth, and seeing how far I can truly push myself.</p>
-    
+      <p>I study Ecological and Environmental Sciences at the University of Edinburgh. I'm passionate about biodiversity, sustainability, and project management, with experience across Europe and Africa. I dive, run, cook, and compete in triathlons. I’m fluent in French and English, and conversational in Spanish.</p>
     </section>
-    <section id="experience" class="section-experience">
-      <h2>Projects</h2>
-      <div class="experience-grid">
-        <div class="experience-card">
-          <h3>Geophysical Data Science Project</h3>
-          <p>Completed coursework in Geophysical Data Science, strengthening my proficiency in Python for geophysical data analysis and modelling, including exploratory data analysis, statistical extraction, and adapting existing code to solve new problems.</p>
-          <a href="analysis.html" class="button">Read Project →</a>
-        </div>
-        <div class="experience-card">
-          <h3>Summer Fieldwork Report</h3>
-          <p>Through this course, I developed core field skills in ecology, including species identification, ecological surveying, and data collection. I gained hands-on experience identifying common plants and invertebrates across various Scottish habitats and learned how to design and carry out simple ecological studies. The course also emphasises clear scientific communication through concise ecological reporting.</p>
-          <a href="fieldwork.html" class="button">Read Report →</a>
-        </div>
+
+    <section id="triathlon" class="card">
+      <h2>Triathlon</h2>
+      <p>As vice-captain of the Edinburgh University Triathlon team, I lead training and push myself and others toward excellence. Highlights include a near-podium finish at BUCS and leading team relays with pride and strategy.</p>
+      <div class="photo-grid">
+        <!-- IMG_6598.jpeg -->
+        <!-- 971e2429-5cc4... -->
       </div>
+    </section>
+
+    <section id="cooking" class="card">
+      <h2>Cooking</h2>
+      <p>Cooking helps me explore cultures, unwind, and be creative. From street waffles to BBQs in the park, I find joy in sharing food with others and learning recipes from all over the world.</p>
+      <div class="photo-grid">
+        <!-- 82596667-227a... -->
+        <!-- ca3efb47-e7ba... -->
+      </div>
+    </section>
+
+    <section id="hobbies" class="card">
+      <h2>Other Hobbies</h2>
+      <p>I love photography, hiking, diving, and exploring wild places. Whether I’m admiring a sunset, identifying plants, or walking with friends under the Scottish sky, I’m always tuned into nature’s rhythm.</p>
+      <div class="photo-grid">
+        <!-- IMG_0917.jpeg -->
+        <!-- 1a2cd29e-e641... -->
+        <!-- 33ea6264-9bb5... -->
+        <!-- RCwRDtdQtTCS... -->
+        <!-- beea4127-8219... -->
+      </div>
+    </section>
+
+    <section id="projects" class="card">
+      <h2>Projects</h2>
+      <div>
+        <h3>Geophysical Data Science</h3>
+        <p>Strengthened my Python skills for geophysical data analysis and modelling. Worked on exploratory data analysis, statistical extraction, and adapting scripts to solve real-world problems.</p>
+        <a href="analysis.html" class="project-link">View Project →</a>
+      </div>
+      <div style="margin-top: 2rem;">
+        <h3>Summer Fieldwork Report</h3>
+        <p>Hands-on ecological field training: species identification, ecological surveying, and reporting. Worked across multiple Scottish habitats, emphasizing scientific communication and ecological integrity.</p>
+        <a href="fieldwork.html" class="project-link">Read Report →</a>
+      </div>
+    </section>
+
   </main>
   <footer>
     <p>&copy; 2025 Vadim Laime. All rights reserved.</p>
-    <div class="icons">
-      <a href="mailto:vadim.laime@me.com"><img src="https://img.icons8.com/ios-filled/50/000000/open-envelope.png" alt="Email Icon"></a>
-      <a href="tel:0498532226"><img src="https://img.icons8.com/ios-filled/24/000000/phone.png" alt="Phone Icon"></a>
-      <a href="https://www.linkedin.com/in/vadim-laime-2224b02b3/" target="_blank"><img src="https://img.icons8.com/ios-filled/24/000000/linkedin.png" alt="LinkedIn Icon"></a>
-    </div>
   </footer>
-  <script>
-    const nav = document.getElementById('navbar');
-    const header = document.getElementById('home');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > header.offsetHeight - nav.offsetHeight) nav.classList.add('scrolled');
-      else nav.classList.remove('scrolled');
-    });
-  </script>
 </body>
 </html>
